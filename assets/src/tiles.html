@@ -1,0 +1,61 @@
+<!doctype html>
+<!-- ponytail: renders the 4 README tiles; rebuild with ../build.sh -->
+<html><head><meta charset="utf-8">
+<style>
+  *{box-sizing:border-box;margin:0}
+  html,body{width:1200px;height:675px;overflow:hidden;font-family:-apple-system,"SF Pro Display",Helvetica,sans-serif}
+  .t{display:none;width:1200px;height:675px;position:relative;overflow:hidden}
+  .label{position:absolute;left:48px;bottom:44px;color:#fff}
+  .label h2{font-size:44px;font-weight:700;letter-spacing:-.5px}
+  .label p{font-size:22px;opacity:.85;margin-top:6px}
+  .phones{position:absolute;right:56px;top:40px;display:flex;gap:22px}
+  .phones img{height:595px;border-radius:28px;box-shadow:0 20px 50px rgba(0,0,0,.35)}
+  /* 1 klik */
+  #klik{background:linear-gradient(135deg,#0a5bd3,#063a8c)}
+  /* 2 hafness */
+  #hafness{background:#0d1117;color:#c9d1d9;font-family:"SF Mono",Menlo,monospace}
+  .term{position:absolute;inset:56px 48px 180px 48px;background:#161b22;border:1px solid #30363d;border-radius:14px;padding:58px 34px 28px;font-size:27px;line-height:1.65}
+  .dots{position:absolute;top:20px;left:22px;display:flex;gap:9px}.dots i{width:14px;height:14px;border-radius:50%;display:block}
+  .g{color:#3fb950}.c{color:#79c0ff}.m{color:#8b949e}.y{color:#d29922}
+  #hafness .label{bottom:40px;font-family:-apple-system,Helvetica,sans-serif}
+  /* 3 apps */
+  #apps{background:linear-gradient(135deg,#1f1f24,#3a3a44)}
+  #apps .phones{right:40px;top:150px;gap:18px}
+  #apps .phones img{height:470px;border-radius:22px}
+  #apps .label{top:44px;bottom:auto}
+  /* 4 ar */
+  #ar{background:#1f7f56}
+  #ar img{position:absolute;right:60px;top:0;height:675px;-webkit-mask-image:radial-gradient(circle,#000 45%,transparent 70%)}
+</style></head><body>
+
+<div class="t" id="klik">
+  <div class="phones"><img src="klik-home.webp"><img src="klik-cart.webp"></div>
+  <div class="label"><h2>Klik Indomaret</h2><p>Production iOS · UIKit · Swift Testing</p></div>
+</div>
+
+<div class="t" id="hafness">
+  <div class="term">
+    <div class="dots"><i style="background:#ff5f56"></i><i style="background:#ffbd2e"></i><i style="background:#27c93f"></i></div>
+    <div><span class="c">›</span> /hafness-contract <span class="m">"add offline cache"</span></div>
+    <div class="m">  scope · non-scope · budget written to .hafness/scope/</div>
+    <div><span class="c">›</span> /hafness-start</div>
+    <div class="m">  agent works inside the contract; policy.md is off-limits</div>
+    <div><span class="c">›</span> .hafness/verify.sh</div>
+    <div>  <span class="g">HAFNESS_VERIFY: PASS</span> <span class="m">· receipt appended to run log</span></div>
+    <div class="m">  <span class="y">8 features</span> shipped against its own gate · it harnesses itself</div>
+  </div>
+  <div class="label"><h2>Hafness</h2><p>Open-source harness that keeps AI coding agents in scope</p></div>
+</div>
+
+<div class="t" id="apps">
+  <div class="phones"><img src="localhunt-place.webp"><img src="bondy-summary.webp"><img src="jobshub-list.webp"><img src="myiiq-welcome.webp"></div>
+  <div class="label"><h2>Freelance &amp; Academy apps</h2><p>SwiftUI · Flutter · MapKit · CoreData · EventKit</p></div>
+</div>
+
+<div class="t" id="ar">
+  <img src="eman-poster.jpg">
+  <div class="label"><h2>eMart AR game</h2><p>ARKit · RealityKit · Blender assets</p></div>
+</div>
+
+<script>document.getElementById(location.hash.slice(1)||'klik').style.display='block'</script>
+</body></html>
